@@ -1,0 +1,84 @@
+import math
+import numpy as np
+import random
+import csv
+ 
+def save(results):
+   with open("/Users/XXXXX/Desktop/Coding/Math IA/Math IA Data/ttgamesim.csv","w",newline="") as file:
+       writer = csv.writer(file)
+       writer.writerows(results)
+ 
+def main():
+   x = 1000
+   B_results = [0,0,0,0,0]
+ 
+   for i in range(x):
+       probabilityA = [i for i in range(50,101)] 
+ 
+       tg_tm = [(1,225),(3,75),(5,45),(9,25),(15,15)]
+ 
+       results = [] 
+       i = 0 
+ 
+       for pgsystem in tg_tm:
+           n = math.ceil(pgsystem[0]/2)
+           m = math.ceil(pgsystem[1]/2)
+ 
+           pointsA = 0
+           pointsB = 0
+           gamesA  = 0
+           gamesB  = 0
+ 
+           B_count = 0
+ 
+           for p in probabilityA: 
+               playing = True
+               while playing:
+                   if random.randint(1,101) < p: 
+                       pointsA += 1
+                   else:
+                       pointsB += 1
+                  
+                   if pointsA == n: 
+                       gamesA += 1
+                       pointsA = 0 
+                       pointsB = 0
+                       if (gamesA or gamesB) == m: 
+                           if gamesA > gamesB:
+                               winner = 'A'
+                           else:
+                               winner = 'B'
+                               B_count += 1
+                           result = [p, n, m, winner]
+                           results.append(result)
+                           playing = False
+                           gamesA = 0 
+                           gamesB = 0
+                           break
+ 
+                   elif pointsB == n: 
+                       gamesB += 1
+                       pointsA = 0
+                       pointsB = 0
+                       if (gamesA or gamesB) == m:
+                           if gamesA > gamesB:
+                               winner = 'A'
+                           else:
+                               winner = 'B'
+                               B_count += 1
+                           result = [p, n, m, winner]
+                           results.append(result)
+                           playing = False
+                           gamesA = 0
+                           gamesB = 0
+                           break
+          
+           B_results[i] += B_count
+           i += 1
+          
+       #save(results)
+   B_results = [i/x for i in B_results]
+   print(B_results)
+ 
+if __name__ == "__main__":
+   main()
