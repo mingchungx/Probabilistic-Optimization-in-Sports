@@ -1,6 +1,7 @@
 # Probabilistic-Optimization-in-Sports
 
-Probability distribution visualization and simuluation for a mathematics paper that optimizes the point-game system of sporting matches.
-Read the paper at:
+##### Built with: Python and matplotlib
 
-https://drive.google.com/file/d/13W8soH2t6sQ59gy0w5pQpkYQVy2B4Cpa/view?usp=sharing
+This research paper uses probability distribution visualization and simuluation to optimizes the point-game system of sporting matches, in the context of table tennis. 
+
+Read the paper at the pdf file in this repository.
