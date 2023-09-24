@@ -3,7 +3,7 @@
 
 ## Description
 
-This repository holds the source for for generating the figures and simulations for probability optimization in various sporting point-game formats. These are supporting datasets and algorithms the full paper, which can be read in the "Table Tennis Probabilistic Optimization.pdf" file in the root directory.
+This repository holds the source for generating the figures and simulations for probability optimization in various sporting point-game formats. These are supporting datasets and algorithms the full paper, which can be read in the "Table Tennis Probabilistic Optimization.pdf" file in the root directory.
 
 
 ## Installation
