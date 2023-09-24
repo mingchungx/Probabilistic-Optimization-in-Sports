@@ -1,7 +1,19 @@
 # Probabilistic-Optimization-in-Sports
 
-##### Built with: Python and matplotlib
 
-This research paper uses probability distribution visualization and simuluation to optimizes the point-game system of sporting matches, in the context of table tennis. 
+## Description
 
-Read the paper at the pdf file in this repository.
+This repository holds the source for for generating the figures and simulations for probability optimization in various sporting point-game formats. These are supporting datasets and algorithms the full paper, which can be read in the "Table Tennis Probabilistic Optimization.pdf" file in the root directory.
+
+
+## Installation
+
+Download and clone the code and paper by following the command below:
+```
+git clone https://github.com/mingchungx/Probabilistic-Optimization-in-Sports.git
+```
+
+
+## Authors
+
+Mingchung Xia
